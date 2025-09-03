@@ -1,11 +1,6 @@
-
 name = "mexico-logistics-query"
 compatibility_date = "2025-09-03"
 
-[build]
-command = "npx wrangler deploy"
-
-# Define the site bucket (the folder containing your static files)
-[site]
-bucket = "./"  # Specifies the current directory containing index.html, logo.png, etc.
-entry-point = "./worker.js"  # Specifies the worker entry point
+[[site]]
+bucket = "./"  # Set the folder containing static files like index.html
+entry-point = "./worker.js"  # Worker script
