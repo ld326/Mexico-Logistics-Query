@@ -1,2 +1,2 @@
-name = "Mexico-Logistics-Query"
+name = "mexico-logistics-query"
 main = "worker.js"
