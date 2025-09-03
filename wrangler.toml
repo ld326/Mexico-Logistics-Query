@@ -1,6 +1,5 @@
-name = "my-worker"
+name = "your-worker-name"
 main = "workers-site/index.js"
 
 [site]
-bucket = "./public"  # 你的静态资源目录
-entry-point = "workers-site"
+bucket = "./public"  # 如果你有静态资源目录
