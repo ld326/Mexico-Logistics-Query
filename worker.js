@@ -1,4 +1,3 @@
-
 // filename: worker.js
 // 目标站
 const TARGET = "http://www.mx56.vip";
