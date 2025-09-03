@@ -5,5 +5,5 @@ compatibility_date = "2025-09-03"
 command = "npx wrangler deploy"
 
 [[site]]
-bucket = "./"  # 静态文件所在的目录（index.html 和 logo.png）
-entry-point = "./worker.js"  # Worker 入口文件
+bucket = "./"  # 指定当前目录作为静态文件的目录
+entry-point = "./worker.js"  # 指定 worker.js 作为入口文件
