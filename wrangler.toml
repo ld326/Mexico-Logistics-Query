@@ -1,5 +1,2 @@
-name = "your-worker-name"
-main = "workers-site/index.js"
-
-[site]
-bucket = "./public"  # 如果你有静态资源目录
+name = "Mexico-Logistics-Query"
+main = "worker.js"
