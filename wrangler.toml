@@ -5,6 +5,7 @@ compatibility_date = "2025-09-03"
 [build]
 command = "npx wrangler deploy"
 
-[[site]]
-bucket = "./"  # 这是指向你的项目根目录（包含 `index.html` 和 `worker.js`）
-entry-point = "./worker.js"  # worker.js 是你要部署的入口文件
+# Define the site bucket (the folder containing your static files)
+[site]
+bucket = "./"  # Specifies the current directory containing index.html, logo.png, etc.
+entry-point = "./worker.js"  # Specifies the worker entry point
