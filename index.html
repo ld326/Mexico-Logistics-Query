@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>嵌入翻译页面</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+        header {
+            padding: 10px;
+            background-color: #fff;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+        }
+        iframe {
+            width: 100%;
+            height: 90vh;
+            border: none;
+        }
+        select {
+            margin-top: 10px;
+            padding: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>嵌入并翻译页面</h1>
+</header>
+
+<iframe id="iframe" src="https://your-worker-domain.workers.dev/proxy?lang=zh-CN"></iframe>
+
+<script>
+    const iframe = document.getElementById('iframe');
+    
+    // 判断用户语言并根据语言设置翻译目标语言
+    function getUserLanguage() {
+        const lang = (navigator.language || "en").toLowerCase();
+        if (lang.startsWith("zh")) return "zh-CN"; // 中文
+        if (lang.startsWith("es")) return "es"; // 西班牙语
+        return "en"; // 默认为英语
+    }
+
+    // 获取用户语言并更新 iframe 地址
+    const userLang = getUserLanguage();
+    iframe.src = `https://your-worker-domain.workers.dev/proxy?lang=${userLang}`;
+</script>
+
+</body>
+</html>
