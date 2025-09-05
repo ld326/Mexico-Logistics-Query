@@ -31,13 +31,17 @@
       justify-content: center;
       align-items: center;
       height: calc(100vh - 100px); /* 主内容区占据大部分屏幕 */
+      flex-direction: column;
+      text-align: center;
     }
 
     .embedded-site {
       width: 100%;
-      height: 100%;
+      height: 80vh;
       max-width: 1200px; /* 最大宽度限制 */
       border: none;
+      background-color: #f0f0f0;
+      margin-bottom: 20px;
     }
 
     footer {
@@ -45,17 +49,38 @@
       padding: 10px;
       background-color: #f1f1f1;
     }
+
+    .btn-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .btn-link:hover {
+      background-color: #0056b3;
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="logo">
-      <img src="logo.png" alt="Logo">
+      <img src="logo.png" alt="elifedigi Logo">
     </div>
   </header>
 
   <main>
+    <!-- 如果 iframe 无法正常加载，我们直接显示一个链接 -->
+    <p>点击以下链接查看墨西哥物流跟踪信息：</p>
+    <a href="http://www.mx56.vip/" class="btn-link" target="_blank">访问墨西哥物流跟踪网站</a>
+
+    <!-- 如果你依然想嵌入 iframe，可以尝试以下代码 -->
+    <!--
     <iframe src="http://www.mx56.vip/" frameborder="0" class="embedded-site"></iframe>
+    -->
   </main>
 
   <footer>
